@@ -130,12 +130,12 @@ function forgeTheFellowShip() {
   myHobbits = document.getElementById("theHobbits");
   myBuddies = document.getElementById("buddiesUL");
   document.getElementById("Rivendell").appendChild(myFellowship);
-  for(var i = myHobbits.childNodes.length-1; i>=0; i--){
-    myFellowship.appendChild(myHobbits.childNodes[i]);
-    // alert(myFellowship.childNodes[myFellowship.childNodes.length-1].getAttribute("id") + " has joined your party!");
-  }
   for(var j = myBuddies.childNodes.length-1; j>=0; j--){
-    myFellowship.appendChild(myBuddies.childNodes[j]);
+    myFellowship.appendChild(myBuddies.childNodes[0]);
+  // alert(myFellowship.childNodes[myFellowship.childNodes.length-1].getAttribute("id") + " has joined your party!");
+  }
+  for(var i = myHobbits.childNodes.length-1; i>=0; i--){
+    myFellowship.appendChild(myHobbits.childNodes[0]);
     // alert(myFellowship.childNodes[myFellowship.childNodes.length-1].getAttribute("id") + " has joined your party!");
   }
   console.log(myFellowship);
